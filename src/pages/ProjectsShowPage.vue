@@ -7,7 +7,7 @@ export default {
     data() {
         return {
             backendUrl: "http://127.0.0.1:8000",
-            project: {}
+            project: null
         }
     },
     methods: {
@@ -29,8 +29,8 @@ export default {
         <div class="row justify-content-center py-5">
             <div class="col-6"  >
 
-                <div class="card" v-if="this.project!={}">
-                    <img :src="this.backendUrl + '/storage/' + this.project.cover_img" class="card-img-top" alt="...">
+                <div class="card" v-if="this.project!=null">
+                    <img  :src="this.backendUrl+'/storage/'+this.project.cover_img" class="card-img-top" alt="..." >
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
                         <p class="card-text">{{ project.description }}</p>
