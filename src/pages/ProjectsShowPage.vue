@@ -13,7 +13,7 @@ export default {
     methods: {
         fetchProjects() {
             axios.get(`${this.backendUrl}/api/projects/${this.$route.params.id}`).then((resp) => {
-                console.log(resp.data);
+                
                 this.project = resp.data;
             })
         }
