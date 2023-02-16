@@ -39,6 +39,10 @@
             label: "Contatti",
             routeName: "contacts",
           },
+          {
+            label:"Progetti",
+            routeName:"projects.index"
+          }
         ],
       };
     },
