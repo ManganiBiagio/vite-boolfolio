@@ -26,7 +26,7 @@ export default {
 
 <template>
   <div class="container">
-    <h1>Pagina Home</h1>
+    <h1>Pagina Progetti</h1>
     <div class="row">
         <div class="col-4" v-for="project in this.projects">
             <PorjectCard :project="project"></PorjectCard>

@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "./pages/Home.vue";
-import ContactsPage from "./pages/Contacts.vue"
-import ProjectsIndexPage from "./pages/ProjectsIndexPage.vue"
-
+import ContactsPage from "./pages/Contacts.vue";
+import ProjectsIndexPage from "./pages/ProjectsIndexPage.vue";
+import ProjectsShowPage from "./pages/ProjectsShowPage.vue";
 
 const router = createRouter({
   
@@ -25,6 +25,11 @@ const router = createRouter({
         path:"/projects",
         name:"projects.index",
         component:ProjectsIndexPage
+    },
+    {
+      path:"/projects/:id",
+      name:"projects.show",
+      component:ProjectsShowPage,
     }
   ]
 });
