@@ -1,18 +1,19 @@
 <script>
 import axios from "axios";
+import { store } from "../store";
 import PorjectCard from "../components/ProjectCard.vue"
 export default {
   name: "Home",
   components:{PorjectCard},
   data(){
     return{
-        backendUrl:"http://127.0.0.1:8000",
+        store,
         projects:[]
     }
   },
   methods:{
     fetchProjects(){
-        axios.get(`${this.backendUrl}/api/projects`).then((resp)=>{
+        axios.get(`${store.backendUrl}/api/projects`).then((resp)=>{
             
             this.projects=resp.data.data;
         })

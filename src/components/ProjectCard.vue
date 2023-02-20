@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="`${this.backendUrl}/storage/${project.cover_img}`" class="card-img-top" alt="...">
+        <img :src="`${store.backendUrl}/storage/${project.cover_img}`" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ project.name }}</h5>
             <p class="card-text">{{ project.description }}</p>
@@ -18,10 +18,11 @@
 </template>
   
 <script>
+import { store } from "../store";
 export default {
     data() {
         return {
-            backendUrl: "http://127.0.0.1:8000",
+            store,
         }
     },
     props: {
@@ -30,4 +31,7 @@ export default {
 }
 </script>
   
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.card{
+    height: 100%;
+}</style>
